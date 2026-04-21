@@ -1,0 +1,9 @@
+{
+  "name": "upi-qr-verification",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "qrcode": "^1.5.3",
+    "uuid": "^9.0.1"
+  }
+}

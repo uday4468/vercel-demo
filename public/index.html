@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UPI Payment</title>
+</head>
+
+<body>
+
+<h2>UPI Payment Form</h2>
+
+<form action="/submit" method="POST">
+
+<label>Name</label><br>
+<input type="text" name="name" required><br><br>
+
+<label>UPI ID</label><br>
+<input type="text" name="upi" required><br><br>
+
+<label>Policy Number</label><br>
+<input type="text" name="policy" required><br><br>
+
+<label>Amount</label><br>
+<input type="number" name="amount" required><br><br>
+
+<button type="submit">Generate QR</button>
+
+</form>
+
+</body>
+</html>
