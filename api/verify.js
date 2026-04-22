@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require("uuid")
 const data = require("../data")
 
 module.exports = async (req, res) => {
@@ -13,17 +12,19 @@ req.on("end", () => {
 
 const params = new URLSearchParams(body)
 
-const name = params.get("name")
-const upi = params.get("upi")
+const id = params.get("id")
 const policy = params.get("policy")
-const amount = params.get("amount")
 
-const id = uuidv4()
+if (!data[id]) {
+return res.end("Invalid Request")
+}
 
-data[id] = { name, upi, policy, amount }
+if (data[id].policy !== policy) {
+return res.end("Policy Number Incorrect")
+}
 
 res.writeHead(302, {
-Location: `/verify.html?id=${id}`
+Location: `/api/payment?id=${id}`
 })
 
 res.end()

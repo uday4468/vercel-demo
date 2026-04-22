@@ -1,8 +1,7 @@
 {
   "routes": [
-    {
-      "src": "/submit",
-      "dest": "/api/submit.js"
-    }
+    { "src": "/submit", "dest": "/api/submit.js" },
+    { "src": "/api/verify", "dest": "/api/verify.js" },
+    { "src": "/api/payment", "dest": "/api/payment.js" }
   ]
 }
